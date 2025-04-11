@@ -28,19 +28,19 @@ export default function Home() {
               <Search className="h-4 w-4 text-muted-foreground" />
             </div>
           </div>
-          <nav className="hidden md:flex items-center gap-6">
-            <Link href="/discover" className="text-sm font-medium">
-              Discover
-            </Link>
-            <Link href="/professionals" className="text-sm font-medium">
-              Professionals
-            </Link>
-            <Link href="/portfolios" className="text-sm font-medium">
-              Portfolios
-            </Link>
-            <Link href="/dashboard" className="text-sm font-medium">
-              Dashboard
-            </Link>
+          <nav className="flex items-center gap-4">
+            <Button variant="ghost" className="text-sm font-medium hover:text-primary" asChild>
+              <Link href="/discover">Discover</Link>
+            </Button>
+            <Button variant="ghost" className="text-sm font-medium hover:text-primary" asChild>
+              <Link href="/professionals">Professionals</Link>
+            </Button>
+            <Button variant="ghost" className="text-sm font-medium hover:text-primary" asChild>
+              <Link href="/portfolios">Portfolios</Link>
+            </Button>
+            <Button variant="ghost" className="text-sm font-medium hover:text-primary" asChild>
+              <Link href="/dashboard">Dashboard</Link>
+            </Button>
           </nav>
           <div className="hidden md:flex items-center gap-4">
             <Button variant="outline" size="sm">
