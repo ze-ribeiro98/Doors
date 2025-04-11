@@ -12,9 +12,7 @@ export default function Home() {
     <div className="flex min-h-screen flex-col">
       <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-xl font-bold text-gold">doors</span>
-          </div>
+          <div className="flex-1" />
           <div className="relative w-full max-w-md mx-4 hidden md:block">
             <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <MapPin className="h-4 w-4 text-muted-foreground" />
@@ -28,21 +26,7 @@ export default function Home() {
               <Search className="h-4 w-4 text-muted-foreground" />
             </div>
           </div>
-          <nav className="flex items-center gap-4">
-            <Button variant="ghost" className="text-sm font-medium hover:text-primary" asChild>
-              <Link href="/discover">Discover</Link>
-            </Button>
-            <Button variant="ghost" className="text-sm font-medium hover:text-primary" asChild>
-              <Link href="/professionals">Professionals</Link>
-            </Button>
-            <Button variant="ghost" className="text-sm font-medium hover:text-primary" asChild>
-              <Link href="/portfolios">Portfolios</Link>
-            </Button>
-            <Button variant="ghost" className="text-sm font-medium hover:text-primary" asChild>
-              <Link href="/dashboard">Dashboard</Link>
-            </Button>
-          </nav>
-          <div className="hidden md:flex items-center gap-4">
+          <div className="flex-1 flex justify-end items-center gap-4">
             <Button variant="outline" size="sm">
               Log in
             </Button>
