@@ -1,11 +1,12 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Clock, Filter, MapPin, Search } from "lucide-react"
+import { ArrowRight, Clock, Filter, MapPin, Search, Users2, LayoutGrid } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { SearchBar } from '@/components/layout/search-bar'
 
 export default function Home() {
   return (
@@ -26,18 +27,15 @@ export default function Home() {
               <Search className="h-4 w-4 text-muted-foreground" />
             </div>
           </div>
-          <div className="flex-1 flex justify-end items-center gap-4">
-            <Button variant="outline" size="sm">
-              Log in
-            </Button>
-            <Button size="sm" asChild>
-              <Link href="/get-quote">Get a Quote</Link>
-            </Button>
-          </div>
+          <div className="flex-1" />
         </div>
       </header>
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 bg-gradient-to-b from-muted/50 to-muted">
+        <div className="w-full pt-4">
+          <SearchBar />
+        </div>
+
+        <section className="w-full pt-12 md:pt-24 lg:pt-32">
           <div className="container px-4 md:px-6">
             <div className="grid gap-6 lg:grid-cols-[1fr_400px] lg:gap-12 xl:grid-cols-[1fr_600px]">
               <div className="flex flex-col justify-center space-y-4">
@@ -306,6 +304,23 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <div className="flex flex-col items-center justify-center gap-8">
+          <div className="flex items-center gap-4">
+            <Link href="/professionals">
+              <Button variant="ghost" size="lg">
+                <Users2 className="mr-2 h-5 w-5" />
+                Professionals
+              </Button>
+            </Link>
+            <Link href="/portefolios">
+              <Button variant="ghost" size="lg">
+                <LayoutGrid className="mr-2 h-5 w-5" />
+                Portfolios
+              </Button>
+            </Link>
+          </div>
+        </div>
       </main>
       <footer className="w-full border-t bg-background py-6 md:py-0">
         <div className="container flex flex-col items-center justify-between gap-4 md:h-24 md:flex-row">
